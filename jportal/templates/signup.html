@@ -1,0 +1,28 @@
+{% load static %}
+<h1>SIGNUP HERE</h1>
+<style>
+    h3{
+        color:red;
+    }
+</style>
+{% for message in messages %}
+<h3>
+    {{message}}
+</h3>
+{% endfor %}
+<form action="signup" method="POST" >
+    {% csrf_token %}
+    <p>Username</p>
+    <input type="text" name="username" />
+    <p>email</p>
+    <input type="email" name="email" />
+    
+    
+    <p>Password1</p> 
+    <input type="password" name="password1" />
+    <p>Password2</p>
+    <input type="password" name="password2" />
+    
+    <input type="submit" name="signin" />
+    
+</form>

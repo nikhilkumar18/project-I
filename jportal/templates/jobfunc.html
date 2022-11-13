@@ -1,0 +1,23 @@
+ {% load static %}
+ <style>
+    body
+    {
+        background-image: url("/static/assets/images/featured/featured-1.jpg");
+    }
+    h2
+    {
+        
+    font-family: var(--font-family);
+    font-size: ;
+    color: var(--light-color-alt);
+    background-color:white;
+    letter-spacing: 1px;
+    transition: background-color .25s,color .25s;
+    }
+ </style>
+<h2>job = {{jobs.job}}</h2>
+<h2>location ={{jobs.location}}</h2>
+<h2>salary ={{jobs.salary}}</h2>
+<h2>workhours ={{jobs.workhours}}</h2>
+<h2>contact ={{jobs.contact}}</h2>
+ 

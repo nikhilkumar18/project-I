@@ -1,0 +1,30 @@
+<div class="sidebar d-grid">
+             
+    <form method="get" >
+         
+        {{jobs_filter.form}}
+        
+    <button class="btn sign-up-btn fancy-border screen-sm-hidden" type="submit" value="SEARCH">
+        <span class="place-items-center">SEARCH</span>
+    </button>
+    </form>
+
+        
+   
+    <form method="get">
+       
+        <table border="1">
+            <tr><th>JOBNAME</th>
+             <th>SALARY</th>  
+            <th>LOCATION</th> </tr>
+            {% for item in jobs_filter.qs %}
+            <tr>
+            <td>{{ item.job }}</td>
+            <td>{{ item.salary }}</td>
+            <td>{{ item.location }}</td>
+        </tr>
+            {% endfor %}
+        </table>
+    </form>
+
+</div> 

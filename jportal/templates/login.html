@@ -1,0 +1,22 @@
+{% load static %}
+<h1>LOGIN HERE</h1>
+<style>
+    h3{
+        color:red;
+    }
+</style>
+{% for message in messages %}
+<h3>
+    {{message}}
+</h3>
+{% endfor %}
+<form action="login" method="POST" >
+    {% csrf_token %}
+    <p>Username</p>
+    <input type="text" name="username" />
+    <p>Password</p>
+    <input type="password" name="password" />
+    <input type="submit" name="signin" />
+    
+    
+</form>
